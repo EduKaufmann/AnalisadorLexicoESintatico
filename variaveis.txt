@@ -1,10 +1,17 @@
+char _asdf1;
 char test;
 int l;
 float asdf;
 char t, abc12, l2;
+char abc1;
+int _;
+int _0;
+float _;
+float 0;
 float 1a;
 float abc, 2f;
 int ,lll;
+float asdf,alalala;
 char _aaaa;
 int _v;
 float __l__;
