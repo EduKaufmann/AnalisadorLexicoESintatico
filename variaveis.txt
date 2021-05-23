@@ -1,0 +1,21 @@
+char test;
+int l;
+float asdf;
+char t, abc12, l2;
+float 1a;
+float abc, 2f;
+int ,lll;
+char _aaaa;
+int _v;
+float __l__;
+ab
+a
+asdsakdjal
+123123
+"abc"
+"a
+bc"
+12312"
+"aasd2
+"23131"
+
