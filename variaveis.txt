@@ -1,5 +1,11 @@
 char _asdf1;
 char test;
+float test1[];
+lol adsad;
+char test[];
+char testing[1];
+char zaaaz[0];
+char lllll[a];
 int l;
 float asdf;
 char t, abc12, l2;

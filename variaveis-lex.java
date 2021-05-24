@@ -4,7 +4,7 @@ import java.util.*;
 %standalone
 %line
 %column
-St = (("int "|"char "|"float ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)";"
+St = (("int "|"float ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)";"|("char "("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)("["[0-9]*"]")?";"
 
 %{
  List<String> st = new ArrayList();
