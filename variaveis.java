@@ -32,10 +32,10 @@ class variaveis {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\12\0\1\0\1\23\1\23\1\23\22\0\1\4\13\0\1\14\3\0"+
-    "\12\12\1\0\1\15\5\0\32\13\1\21\1\0\1\22\1\0\1\11"+
-    "\1\0\1\10\1\13\1\16\2\13\1\5\1\13\1\17\1\1\2\13"+
-    "\1\6\1\13\1\2\1\7\2\13\1\20\1\13\1\3\6\13\12\0"+
+    "\12\0\1\0\1\23\1\23\1\23\22\0\1\4\13\0\1\10\3\0"+
+    "\12\6\1\0\1\11\5\0\32\7\1\16\1\0\1\17\1\0\1\5"+
+    "\1\0\1\14\1\7\1\12\2\7\1\20\1\7\1\13\1\1\2\7"+
+    "\1\21\1\7\1\2\1\22\2\7\1\15\1\7\1\3\6\7\12\0"+
     "\1\23\u1fa2\0\1\23\1\23\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
@@ -49,10 +49,11 @@ class variaveis {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\4\1\1\2\15\0\1\3\10\0";
+    "\1\0\4\1\1\2\17\0\1\3\6\0\1\4\7\0"+
+    "\1\5\1\0";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[28];
+    int [] result = new int[38];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -79,11 +80,12 @@ class variaveis {
   private static final String ZZ_ROWMAP_PACKED_0 =
     "\0\0\0\24\0\50\0\74\0\120\0\24\0\144\0\170"+
     "\0\214\0\240\0\264\0\310\0\334\0\360\0\u0104\0\u0118"+
-    "\0\u012c\0\u0140\0\u0154\0\24\0\u0168\0\u017c\0\u0190\0\u01a4"+
-    "\0\u01b8\0\u01cc\0\u01e0\0\u01f4";
+    "\0\u012c\0\u0140\0\u0154\0\u0168\0\u017c\0\24\0\u0190\0\u01a4"+
+    "\0\u01b8\0\u01cc\0\u01e0\0\u01f4\0\24\0\u0208\0\u021c\0\u0230"+
+    "\0\u0244\0\u0258\0\u026c\0\u0280\0\24\0\u0294";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[28];
+    int [] result = new int[38];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -106,26 +108,34 @@ class variaveis {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\3\2\1\4\10\2\1\5\4\2\1\6"+
-    "\26\0\1\7\27\0\1\10\34\0\1\11\7\0\1\12"+
-    "\27\0\1\13\24\0\1\14\17\0\1\15\27\0\1\7"+
-    "\33\0\1\16\4\0\3\17\1\0\4\17\1\20\1\0"+
-    "\1\17\2\0\3\17\7\0\1\21\20\0\3\17\1\0"+
-    "\4\17\2\22\1\17\1\23\1\24\3\17\4\0\3\25"+
-    "\1\0\7\25\2\0\3\25\4\0\3\26\1\0\4\26"+
-    "\1\27\1\0\1\26\2\0\3\26\14\0\2\22\1\0"+
-    "\1\23\1\24\7\0\3\17\1\15\4\17\1\20\1\0"+
-    "\1\17\2\0\3\17\4\0\3\25\1\0\7\25\1\23"+
-    "\1\24\3\25\4\0\3\26\1\0\4\26\2\30\1\26"+
-    "\1\31\1\24\3\26\1\32\3\0\3\33\1\0\7\33"+
-    "\2\0\3\33\14\0\2\30\1\0\1\31\1\24\3\0"+
-    "\1\32\3\0\3\26\1\21\4\26\1\27\1\0\1\26"+
-    "\2\0\3\26\15\0\1\32\7\0\1\34\2\0\3\33"+
-    "\1\0\7\33\1\31\1\24\3\33\1\32\17\0\1\24"+
-    "\6\0";
+    "\1\2\1\3\10\2\1\4\5\2\1\5\2\2\1\6"+
+    "\26\0\1\7\34\0\1\10\31\0\1\11\5\0\1\12"+
+    "\34\0\1\13\31\0\1\14\5\0\1\15\34\0\1\16"+
+    "\22\0\1\17\10\0\3\20\1\0\1\21\1\0\1\20"+
+    "\2\0\4\20\2\0\3\20\5\0\1\22\22\0\1\23"+
+    "\21\0\3\20\1\0\2\24\1\20\1\25\1\26\4\20"+
+    "\2\0\3\20\2\0\3\27\1\0\3\27\2\0\4\27"+
+    "\2\0\3\27\2\0\3\30\1\0\1\31\1\0\1\30"+
+    "\2\0\4\30\2\0\3\30\5\0\1\32\24\0\2\24"+
+    "\1\0\1\25\1\26\13\0\3\20\1\15\1\21\1\0"+
+    "\1\20\2\0\4\20\2\0\3\20\2\0\3\27\1\0"+
+    "\3\27\1\25\1\26\4\27\2\0\3\27\2\0\3\30"+
+    "\1\0\2\33\1\30\1\34\1\35\4\30\1\36\1\0"+
+    "\3\30\2\0\3\37\1\0\3\37\2\0\4\37\2\0"+
+    "\3\37\2\0\3\40\1\0\1\41\1\0\1\40\2\0"+
+    "\4\40\2\0\3\40\6\0\2\33\1\0\1\34\1\35"+
+    "\4\0\1\36\6\0\3\30\1\22\1\31\1\0\1\30"+
+    "\2\0\4\30\2\0\3\30\7\0\1\36\10\0\1\42"+
+    "\5\0\3\37\1\0\3\37\1\34\1\35\4\37\1\36"+
+    "\1\0\3\37\2\0\3\40\1\0\2\43\1\40\1\44"+
+    "\1\45\4\40\2\0\3\40\2\0\3\46\1\0\3\46"+
+    "\2\0\4\46\2\0\3\46\12\0\1\35\17\0\2\43"+
+    "\1\0\1\44\1\45\13\0\3\40\1\32\1\41\1\0"+
+    "\1\40\2\0\4\40\2\0\3\40\2\0\3\46\1\0"+
+    "\3\46\1\44\1\45\4\46\2\0\3\46\1\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[520];
+    int [] result = new int[680];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -163,10 +173,11 @@ class variaveis {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\3\1\1\11\15\0\1\11\10\0";
+    "\1\0\1\11\3\1\1\11\17\0\1\11\6\0\1\11"+
+    "\7\0\1\11\1\0";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[28];
+    int [] result = new int[38];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -242,7 +253,9 @@ class variaveis {
   private int zzFinalHighSurrogate = 0;
 
   /* user code: */
- List<String> st = new ArrayList();
+ List<String> inteiros = new ArrayList();
+ List<String> chara = new ArrayList();
+ List<String> reais = new ArrayList();
 
 
   /**
@@ -475,13 +488,31 @@ class variaveis {
   private void zzDoEOF() {
     if (!zzEOFDone) {
       zzEOFDone = true;
-      System.out.print("Variáveis: \n");
-  for(int i=0;i<st.size();i++){
-    if(i==st.size()-1)
-     System.out.println(st.get(i));
+      System.out.print("Inteiros: \n");
+  for(int i=0;i<inteiros.size();i++){
+    if(i==inteiros.size()-1)
+     System.out.println(inteiros.get(i));
     else
-     System.out.print(st.get(i)+"\n");
+     System.out.print(inteiros.get(i)+"\n");
   }
+  System.out.print("\n");
+  System.out.print("Chars: \n");
+  for(int i=0;i<chara.size();i++){
+    if(i==chara.size()-1)
+     System.out.println(chara.get(i));
+    else
+     System.out.print(chara.get(i)+"\n");
+  }
+  System.out.print("\n");
+  System.out.print("Reais: \n");
+  for(int i=0;i<reais.size();i++){
+    if(i==reais.size()-1)
+     System.out.println(reais.get(i));
+    else
+     System.out.print(reais.get(i)+"\n");
+  }
+
+
 
     }
   }
@@ -638,15 +669,23 @@ class variaveis {
           case 1: 
             { 
             }
-          case 4: break;
+          case 6: break;
           case 2: 
             { System.out.print(yytext());
             }
-          case 5: break;
+          case 7: break;
           case 3: 
-            { st.add(yytext());
+            { inteiros.add(yytext());
             }
-          case 6: break;
+          case 8: break;
+          case 4: 
+            { chara.add(yytext());
+            }
+          case 9: break;
+          case 5: 
+            { reais.add(yytext());
+            }
+          case 10: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

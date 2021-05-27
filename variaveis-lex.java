@@ -4,24 +4,48 @@ import java.util.*;
 %standalone
 %line
 %column
-St = (("int "|"float ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)";"|("char "("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)("["[0-9]*"]")?";"
+inteiros = (("int ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)";"
+chara = (("char ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)("["[0-9]*"]")?";"
+reais = (("float ")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*)((", "|",")("_"[a-zA-Z_0-9]+|[a-zA-Z]+[_0-9]*))*)";"
 
 %{
- List<String> st = new ArrayList();
+ List<String> inteiros = new ArrayList();
+ List<String> chara = new ArrayList();
+ List<String> reais = new ArrayList();
 %}
 
 %eof{
-  System.out.print("Variáveis: \n");
-  for(int i=0;i<st.size();i++){
-    if(i==st.size()-1)
-     System.out.println(st.get(i));
+  System.out.print("Inteiros: \n");
+  for(int i=0;i<inteiros.size();i++){
+    if(i==inteiros.size()-1)
+     System.out.println(inteiros.get(i));
     else
-     System.out.print(st.get(i)+"\n");
+     System.out.print(inteiros.get(i)+"\n");
   }
+  System.out.print("\n");
+  System.out.print("Chars: \n");
+  for(int i=0;i<chara.size();i++){
+    if(i==chara.size()-1)
+     System.out.println(chara.get(i));
+    else
+     System.out.print(chara.get(i)+"\n");
+  }
+  System.out.print("\n");
+  System.out.print("Reais: \n");
+  for(int i=0;i<reais.size();i++){
+    if(i==reais.size()-1)
+     System.out.println(reais.get(i));
+    else
+     System.out.print(reais.get(i)+"\n");
+  }
+
+
 %eof}
 
 %%
-{St} {st.add(yytext());}
+{inteiros} {inteiros.add(yytext());}
+{chara} {chara.add(yytext());}
+{reais} {reais.add(yytext());}
 \n {}
 . {}
 
