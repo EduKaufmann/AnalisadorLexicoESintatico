@@ -1,0 +1,4 @@
+if (test<2){c=a+b;a=c+d;c++;}else {d=a/a;testando++;lol--;}
+switch(ab){case 1:{teste=a+b;b++;break;}}
+switch(ab){case 1:{teste=a+b;b++;break;}case 2:case 33:{a++;break;}default:{c++;}}
+teste
