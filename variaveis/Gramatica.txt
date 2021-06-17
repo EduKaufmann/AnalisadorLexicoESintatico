@@ -1,0 +1,9 @@
+ETAPA 1
+
+<var> ::= char <char>;|int <int>;|float <float>;
+<char> ::= <nomeVar>([<numeros>*])?
+<int> ::= <nomeVar>
+<float> ::= <nomeVar>
+<letras> ::= a...z | A...Z
+<numeros> ::= 0...9
+<nomeVar> ::= _(<letras><numeros>)+ | (<letras>)+(<numeros>)*((,|, ) _(<letras><numeros>)+ | (<letras>)+<numeros>*)*
