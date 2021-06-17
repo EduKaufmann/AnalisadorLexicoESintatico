@@ -1,0 +1,14 @@
+ETAPA 2
+
+<inicio> ::= <if> | <switch>
+<letras> ::= a...z | A...Z
+<numeros> ::= 0...9
+<nomeVar> ::= _(<letras><numeros>)+ | (<letras>)+(<numeros>)*((,|, ) _(<letras><numeros>)+ | (<letras>)+<numeros>*)*
+<if> ::= if <condic> { (<comand>;)+ } (else { (<comand>;)+})? 
+<condic> ::= (<nomeVar> | (<numeros>)+) <rel> (<nomeVar> | (<numeros>)+)
+<rel> ::= (<|>|==|<=|>=|!=)
+<comand> ::= <nomeVar> = ((<numeros>)+|<nomeVar>) <arit> ((<numeros>)+|<nomeVar>) | <nomeVar>(++|--)
+<arit> ::= (+|-|*|/)
+<switch> ::= switch (<nomeVar>) { <case> (default: <default>)?}
+<case> ::= (case ((<numeros>)+|'<letras>'):)+ {(<comand>;)+ break;}
+<default> ::= {(<comand>;)+}
