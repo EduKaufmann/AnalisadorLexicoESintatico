@@ -1,4 +1,4 @@
-h3. How to Compile with Jflex
+#How to Compile with Jflex
 
 jflex variaveis-lex.java 
 
